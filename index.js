@@ -98,8 +98,3 @@ function readInLogFile(msg) {
             time.getMilliseconds() > 9 ? "0" + time.getMilliseconds() : "00" + time.getMilliseconds()) +
         "] " + msg + "\n");
 }
-
-console.warn("Bonbjour")
-console.info("Bonbjour")
-console.error("Bnojoru");
-console.debug("Doe");
