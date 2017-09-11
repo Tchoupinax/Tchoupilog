@@ -1,0 +1,28 @@
+{
+    "name": "tchoupilog",
+    "version": "1.0.0",
+    "description": "My Node.js logging system, inspired by other...",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Tchoupinax/Tchoupilog.git"
+    },
+    "keywords": [
+        "node",
+        "javascript",
+        "log"
+    ],
+    "author": "Tchoupinax",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Tchoupinax/Tchoupilog/issues"
+    },
+    "homepage": "https://github.com/Tchoupinax/Tchoupilog#readme",
+    "dependencies": {
+        "colors": "^1.1.2",
+        "shelljs": "^0.7.8"
+    }
+}
