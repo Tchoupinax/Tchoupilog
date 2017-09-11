@@ -22,7 +22,6 @@
     },
     "homepage": "https://github.com/Tchoupinax/Tchoupilog#readme",
     "dependencies": {
-        "colors": "^1.1.2",
-        "shelljs": "^0.7.8"
+        "colors": "^1.1.2"
     }
 }
