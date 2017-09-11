@@ -21,7 +21,7 @@ const data = {
  */
 console.old_info = console.info;
 console.info = function () {
-    console.old_info(data.greenBg + textColor, "[INFO]",
+    console.old_info(data.greenBg + textColor, "  [INFO] ",
         reset, data.greenFG, ...arguments, reset);
 };
 module.exports = console.info;
@@ -47,7 +47,7 @@ module.exports = console.warn;
  */
 if (wantStderr) { console.old_error = console.error; } else { console.old_error = console.other; }
 console.error = function () {
-    console.log(data.redBg + textColor, "[ERROR]",
+    console.log(data.redBg + textColor, " [ERROR] ",
         reset, data.redFg, ...arguments, reset);
 };
 module.exports = console.error;
@@ -60,7 +60,7 @@ module.exports = console.error;
  */
 console.old_debug = console.log;
 console.debug = function () {
-    console.old_debug(data.blueBg + textColor, "[DEBUG]",
+    console.old_debug(data.blueBg + textColor, " [DEBUG] ",
         reset, data.blueFg, ...arguments, reset);
 };
 module.exports = console.debug;
@@ -99,7 +99,7 @@ function readInLogFile(msg) {
         "] " + msg + "\n");
 }
 
-console.info("Bonjour")
-console.error("Bonjour");
-console.debug("Bonjour");
-console.warn("Bonjour")
+console.warn("Bonbjour")
+console.info("Bonbjour")
+console.error("Bnojoru");
+console.debug("Doe");
