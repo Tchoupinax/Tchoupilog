@@ -1,6 +1,6 @@
 const colors = require('colors');
 wantStderr = false;
-const textColor = "\x1b[30m";
+const textColor = "\x1b[30;1m";
 const reset = "\x1b[0m";
 const data = {
     greenBg: "\x1b[42m",
@@ -98,3 +98,8 @@ function readInLogFile(msg) {
             time.getMilliseconds() > 9 ? "0" + time.getMilliseconds() : "00" + time.getMilliseconds()) +
         "] " + msg + "\n");
 }
+
+console.info("Bonjour")
+console.error("Bonjour");
+console.debug("Bonjour");
+console.warn("Bonjour")
