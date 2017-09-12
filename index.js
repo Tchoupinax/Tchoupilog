@@ -1,6 +1,6 @@
 const colors = require('colors');
 wantStderr = false;
-const textColor = "\x1b[30;1m";
+const textColor = "\x1b[30m";
 const reset = "\x1b[0m";
 const data = {
     greenBg: "\x1b[42m",
@@ -20,8 +20,8 @@ const data = {
  * ===============================================================
  */
 console.old_info = console.info;
-console.info = function () {
-    console.old_info(data.greenBg + textColor, "  [INFO] ",
+console.info = function() {
+    console.old_info(data.greenBg + textColor, "▶",
         reset, data.greenFG, ...arguments, reset);
 };
 module.exports = console.info;
@@ -33,8 +33,8 @@ module.exports = console.info;
  * ===============================================================
  */
 console.old_warn = console.warn;
-console.warn = function () {
-    console.old_warn(data.yellowBg + textColor, "[WARNING]",
+console.warn = function() {
+    console.old_warn(data.yellowBg + textColor, "!",
         reset, data.yellowFg, ...arguments, reset);
 };
 module.exports = console.warn;
@@ -46,8 +46,8 @@ module.exports = console.warn;
  * ===============================================================
  */
 if (wantStderr) { console.old_error = console.error; } else { console.old_error = console.other; }
-console.error = function () {
-    console.log(data.redBg + textColor, " [ERROR] ",
+console.error = function() {
+    console.log(data.redBg + textColor, "✘",
         reset, data.redFg, ...arguments, reset);
 };
 module.exports = console.error;
@@ -59,8 +59,8 @@ module.exports = console.error;
  * ===============================================================
  */
 console.old_debug = console.log;
-console.debug = function () {
-    console.old_debug(data.blueBg + textColor, " [DEBUG] ",
+console.debug = function() {
+    console.old_debug(data.blueBg + textColor, "Ð",
         reset, data.blueFg, ...arguments, reset);
 };
 module.exports = console.debug;
@@ -72,7 +72,7 @@ module.exports = console.debug;
  * ===============================================================
  */
 console.old_log = console.log;
-console.log = function () {
+console.log = function() {
     console.old_log(...arguments, reset);
 };
 module.exports = console.log
