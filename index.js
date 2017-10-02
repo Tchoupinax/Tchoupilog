@@ -65,17 +65,23 @@ console.debug = function () {
 };
 module.exports = console.debug;
 
-/*
- * ===============================================================
- * ==== O V E R R I D E ==========================================
- * ====================== C O N S O L E . D E B U G ==============
- * ===============================================================
- */
-console.old_log = console.log;
-console.log = function () {
-    console.old_log(...arguments, reset);
-};
-module.exports = console.log
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*
  * ===============================================================
