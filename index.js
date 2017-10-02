@@ -20,7 +20,7 @@ const data = {
  * ===============================================================
  */
 console.old_info = console.info;
-console.info = function() {
+console.info = function () {
     console.old_info(data.greenBg + textColor, "▶",
         reset, data.greenFG, ...arguments, reset);
 };
@@ -33,7 +33,7 @@ module.exports = console.info;
  * ===============================================================
  */
 console.old_warn = console.warn;
-console.warn = function() {
+console.warn = function () {
     console.old_warn(data.yellowBg + textColor, "!",
         reset, data.yellowFg, ...arguments, reset);
 };
@@ -45,9 +45,9 @@ module.exports = console.warn;
  * ====================== C O N S O L E . E R R O R ==============
  * ===============================================================
  */
-if (wantStderr) { console.old_error = console.error; } else { console.old_error = console.other; }
-console.error = function() {
-    console.log(data.redBg + textColor, "✘",
+if (wantStderr) { console.old_error = console.error; } else { console.old_error = console.log; }
+console.error = function () {
+    console.old_error(data.redBg + textColor, "✘",
         reset, data.redFg, ...arguments, reset);
 };
 module.exports = console.error;
@@ -59,7 +59,7 @@ module.exports = console.error;
  * ===============================================================
  */
 console.old_debug = console.log;
-console.debug = function() {
+console.debug = function () {
     console.old_debug(data.blueBg + textColor, "Ð",
         reset, data.blueFg, ...arguments, reset);
 };
@@ -72,7 +72,7 @@ module.exports = console.debug;
  * ===============================================================
  */
 console.old_log = console.log;
-console.log = function() {
+console.log = function () {
     console.old_log(...arguments, reset);
 };
 module.exports = console.log
